@@ -1,17 +1,4 @@
 {
-
-    "_color empty": "牌组里没有新卡片时的文字颜色",
-    "_absolute": true,
-    "_color": "牌组的数字颜色, header是标题颜色",
-    "_description": "描述, 但是修改后不起作用,应该不是这里设置的",
-    "_header": "顶部一行的标题和文字样式 <p style='color: #'>Due</p>",
-    "_name": "这个不清楚干啥的,应该是用于后台计算的 不要动",
-    "_overlay": null,
-    "_percent": "是否显示百分比, true false ",
-    "_present": "是否显示该列数据 true false",
-    "_subdeck": true,
-    "_条形图": "条形图(今日进度/总进度)里的names决定了里面展示哪些数据",
-
     "book symbol": "{",
     "cap value": null,
     "color empty": "#40c463",
@@ -57,10 +44,22 @@
         {
             "_note":"三周内需要复习的卡片",
             "absolute": true,
-            "color": "#69d686",
+            "color": "#40c463",
             "description": "Number of reviewed cards with interval at less than 3 weeks",
-            "header": "<p style='color: #69d686'>三周内</p>",
+            "header": "<p style='color: #40c463'>三周内</p>",
             "name": "young",
+            "overlay": null,
+            "percent": false,
+            "present": true,
+            "subdeck": true
+        },
+        {
+            "_note":"三周后需要复习的卡片",
+            "absolute": true,
+            "color": "#216e39",
+            "description": "Number of reviewed cards with interval at less than 3 weeks",
+            "header": "<p style='color: #216e39'>三周后</p>",
+            "name": "mature",
             "overlay": null,
             "percent": false,
             "present": true,
@@ -131,13 +130,13 @@
             "subdeck": true
         },
         {
-            "_note":" 柱状图  mature三周内,young三周后,学习中,unseen从未学习,buried跳过的卡片,suspended暂停的卡片 [names定义进度条里显示的数据] ",
+            "_note":" 柱状图  young三周内,mature三周后,learning card学习中,unseen从未学习,buried跳过的卡片,suspended暂停的卡片 [names定义进度条里显示的数据] ",
             "description": "Percent bar showing the decks's repartition",
             "header": "<p style='color: #000'>总进度</p>",
             "name": "bar",
             "names": [
-                "mature",
                 "young",
+                "mature",
                 "learning card",
                 "unseen",
                 "buried",
@@ -311,7 +310,7 @@
         {
             "_note": "三周后要学习的卡片数(总进度)",
             "absolute": true,
-            "color": "#69d686",
+            "color": "#216e39",
             "description": "Number of reviewed cards with interval at least 3 weeks",
             "header": null,
             "name": "mature",
@@ -323,7 +322,7 @@
         {
             "_note": "三周内要学习的卡片数(总进度)",
             "absolute": true,
-            "color": "#69d686",
+            "color": "#40c463",
             "description": "Number of reviewed cards with interval less than 3 weeks",
             "header": null,
             "name": "young",
